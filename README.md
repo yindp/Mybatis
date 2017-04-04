@@ -1,2 +1,1 @@
-# Mybatis
-Mybatis
+Init Mybatis gitlab project.
