@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bfe.domain.UserInfo">
+
+	<resultMap type="userInfo" id="userMap">
+		<result column="user_id" property="userId"/>
+		<result column="user_name" property="username"/>
+		<result column="user_age" property="userAge"/>
+		<result column="user_sex" property="userSex"/>
+		<result column="user_brithday" property="userBrithday"/>
+	</resultMap>
+	
+	<insert id="adduser" parameterType="userInfo">
+		insert into user_info (user_id,user_name,user_age,user_sex,user_brithday)
+		values(#{userId},#{username},#{userAge},#{userSex},now())
+	</insert>
+		
+</mapper>
